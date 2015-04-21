@@ -1,0 +1,18 @@
+Create a new event!
+
+<%= form_for @event do |f| %>
+  <ul>
+    <li>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
+
+    <li>
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </li>
+
+      <%= f.submit "Create my event"%>
+  </ul>
+
+<% end %>
