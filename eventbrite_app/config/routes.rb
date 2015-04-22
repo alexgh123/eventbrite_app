@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
   root            'events#index'
   resources       'events'
   get             'users/new'
   resources       'users'
+
+    #i could use aliases for routes.rb so that http request don't reveal database structure like this: get       'magic' =>      'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
