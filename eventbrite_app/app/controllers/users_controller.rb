@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     # sql injection suceptible
+    # @events = Event.find(params[:id])
+    @events = @user.events
+    # @microposts = @user.microposts.paginate(page: params[:page])
+    # ^ that is horendus, but it works, i think i need to use params or something
   end
 
   def create
