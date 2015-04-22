@@ -12,6 +12,16 @@ Sign up!
       <%= f.email_field :email %>
     </li>
 
+    <li>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </li>
+
+    <li>
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+    </li>
+
       <%= f.submit "Create myself"%>
   </ul>
 
