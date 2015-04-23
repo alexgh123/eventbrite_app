@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :logged_in_user, only: [:edit, :update, :show, :index]
+
   def index
     @users = User.all
   end
@@ -20,11 +22,25 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "You have been self actualized..."
       redirect_to @user
     else
-      flash[:failure] = "nope nothing created"
-      redirect_to root_url
+      render 'new'
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
     end
   end
 
@@ -32,6 +48,11 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_digest)
+    end
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless @user == current_user
     end
 
 end

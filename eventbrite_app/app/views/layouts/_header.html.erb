@@ -7,6 +7,7 @@
     <div align="right">
     <%= link_to "log out", logout_path, method: 'delete'%>
     <%= link_to "My Profile", current_user %>
+    <%= link_to "edit", edit_user_path(current_user) %>
     </div>
 
   </div>
@@ -15,6 +16,7 @@
 
   <%= link_to "Events", root_path %>
   <%= link_to "log in", login_path%>
+  <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
 
 
 <% end %>
