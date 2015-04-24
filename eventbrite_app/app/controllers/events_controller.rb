@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    # this line needs to basically find the current logged in user who is creating the event so that we can assign a user id to the event being created
+    @attendee = Attendee.new
   end
 
   def show
