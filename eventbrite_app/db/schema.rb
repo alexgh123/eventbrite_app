@@ -23,14 +23,15 @@ ActiveRecord::Schema.define(version: 20150424143921) do
   add_index "attendees", ["event_id"], name: "index_attendees_on_event_id"
   add_index "attendees", ["user_id"], name: "index_attendees_on_user_id"
 
-  create_table "guest_lists", force: :cascade do |t|
-    t.string   "atire"
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "event_id"
+    t.integer  "user_id"
   end
 
-  add_index "guest_lists", ["event_id"], name: "index_guest_lists_on_event_id"
+  add_index "events", ["user_id"], name: "index_events_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
