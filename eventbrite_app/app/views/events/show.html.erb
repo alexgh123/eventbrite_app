@@ -6,7 +6,7 @@
     <li>Location:</li><br>
     <%= @event.location %><br><br>
     <li>Event Host</li><br>
-    <%= @host.name %><br><br>
+    <%= User.find(@event.user_id).name %><br><br>
     <li>GuestList:</li><br><br>
     <!-- erb link_to "Attendees", attendees_path erb -->
     <!-- this should render the attendees partial -->
