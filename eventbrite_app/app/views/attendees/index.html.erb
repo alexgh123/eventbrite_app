@@ -1,4 +1,7 @@
-attendees index: <br><br>
+all attendees index: <br><br>
+
+duplicates allowed here
+<br><br>
 
 <% @attendees.each do |attendee| %>
   <li><%= User.find(attendee.user_id).name %></li>
