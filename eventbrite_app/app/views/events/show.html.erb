@@ -11,7 +11,7 @@
     <!-- erb link_to "Attendees", attendees_path erb -->
     <!-- this should render the attendees partial -->
     <% @correct_attendees.each do |attendee| %>
-        <li><%= attendee.user_id %></li>
+        <li><%= User.find(attendee.user_id).name %></li>
     <% end %>
 
   </ul>
