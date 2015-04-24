@@ -5,11 +5,14 @@
     <%= @event.name %><br><br>
     <li>Location:</li><br>
     <%= @event.location %><br><br>
-    <li>Event Host</li>
-    <%= @user.name %><br><br>
-    <li>GuestList:</li>
-    <!-- link to guest list here -->
-    working on it!
+    <li>Event Host</li><br>
+    <%= @host.name %><br><br>
+    <li>GuestList:</li><br><br>
+    <!-- erb link_to "Attendees", attendees_path erb -->
+    <!-- this should render the attendees partial -->
+    <% @correct_attendees.each do |attendee| %>
+        <%= User.find(attendee.user_id).name %><br>
+    <% end %>
 
   </ul>
 </h4>

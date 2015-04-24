@@ -1,0 +1,5 @@
+attendees index: <br><br>
+
+<% @attendees.each do |attendee| %>
+  <li><%= User.find(attendee.user_id).name %></li>
+<% end %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'attendees' => 'attendees#index'
+
   get 'sessions/new'
 
   get    'login'   => 'sessions#new'

@@ -12,7 +12,19 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @user = User.find(@event.user_id)
+    @host = User.find(@event.user_id)
+
+
+    @correct_attendees = Attendee.where(event_id: @event.id)
+
+    # search each attendee item.
+    # pick each attendee item whose attendee.user_id attribute = @event.id
+
+
+    #               = find the attendees who have the right @event.id
+    #               of those, display the name
+    #               User.find(attendee.user_id).name
+    # fidn the attendees where the attendee event id = @event.id
   end
 
   def create
