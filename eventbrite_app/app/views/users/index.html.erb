@@ -4,4 +4,6 @@
   <%= render @users %>
 </ul>
 
-<%= link_to "Create a new user!", new_user_path %>
+<% if !logged_in? %>
+  <%= link_to "Create a new user!", new_user_path %>
+<% end %>
