@@ -23,9 +23,6 @@ ActiveRecord::Schema.define(version: 20150424143921) do
   add_index "attendees", ["event_id"], name: "index_attendees_on_event_id"
   add_index "attendees", ["user_id"], name: "index_attendees_on_user_id"
 
-# Could not dump table "events" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
   create_table "guest_lists", force: :cascade do |t|
     t.string   "atire"
     t.datetime "created_at", null: false
