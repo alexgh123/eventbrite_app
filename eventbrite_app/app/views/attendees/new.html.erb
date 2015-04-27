@@ -1,0 +1,19 @@
+new attendees right here!
+
+<%= form_for @attendee do |f| %>
+  <ul>
+
+    <li>
+      <%= f.label :user_id %>
+      <%= f.text_field :user_id %>
+    </li>
+
+    <li>
+      <%= f.label :event_id %>
+      <%= f.text_field :event_id %>
+    </li>
+
+    <%= f.submit "Create my attendee"%>
+
+  </ul>
+<% end %>

@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'attendees' => 'attendees#index'
+  # get 'attendees' => 'attendees#index'
+  # get 'attendees/new'
+
+  # post 'attendees/create'
+
+  resources 'attendees'
 
   get 'sessions/new'
 
