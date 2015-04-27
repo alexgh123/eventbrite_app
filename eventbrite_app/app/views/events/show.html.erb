@@ -15,5 +15,8 @@
     <% end %>
 
   </ul>
+
+  <%= link_to "Add Attendees to this party!", new_attendee_path({:event_id => @event.id}) %>
+
 </h4>
 

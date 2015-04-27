@@ -1,4 +1,4 @@
-new attendees right here!
+new attendees right here!<br><br>
 
 <%= form_for @attendee do |f| %>
   <ul>
@@ -9,9 +9,12 @@ new attendees right here!
     </li>
 
     <li>
-      <%= f.label :event_id, "the party user is coming to" %>
-      <%= f.text_field :event_id %>
+      <%= f.label :event_id, "event number(don't change)" %>
+      <%= f.text_field :event_id, :value => params[:event_id] %>
     </li>
+
+
+    <!-- :value => params[:rfid] -->
 
     <%= f.submit "Create my attendee"%>
 
