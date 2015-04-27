@@ -1,0 +1,12 @@
+to dos:
+
+need to create attendees in new event in bulk
+
+add event date, upcoming/ past events
+
+only host can add guests to party
+
+enforce unique emails, password restrictions
+
+send email invitations? how do you want to invite people?
+
