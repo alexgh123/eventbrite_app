@@ -26,6 +26,7 @@ class EventsController < ApplicationController
     #               of those, display the name
     #               User.find(attendee.user_id).name
     # fidn the attendees where the attendee event id = @event.id
+    # look at readme
   end
 
   def create
