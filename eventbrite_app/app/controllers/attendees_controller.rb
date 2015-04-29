@@ -12,7 +12,8 @@ class AttendeesController < ApplicationController
   end
 
   def create
-    @attendee = Attendee.new(attendee_params)
+    @attendee = Attendee.create(attendee_params)
+
     if @attendee.save
       flash[:success] = "Attendee created!"
       redirect_to @attendee
