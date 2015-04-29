@@ -4,14 +4,18 @@ new attendees right here!<br><br>
   <ul>
 
     <li>
+      Guests for "<%= @event.name %>""
+    </li><br>
+
+    <li>
       <%= f.label :user_id, "user you wish add" %>
       <%= f.text_field :user_id %>
     </li>
 
-    <li>
-      <%= f.label :event_id, "event number(don't change)" %>
-      <%= f.text_field :event_id, :value => params[:event_id] %>
-    </li>
+
+
+
+
 
 
     <!-- :value => params[:rfid] -->

@@ -9,7 +9,8 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @attendee = Attendee.new
-    @guests = User.all
+    @guests = User.all.map{|user| [user.name, user.id]}
+
   end
 
   def show

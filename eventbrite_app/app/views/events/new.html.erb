@@ -16,11 +16,9 @@ Create a new event!
 
     <!--   event id
       guests -->
-    <select name= "user_id">
-      <%= @guests.each do |guest| %>
-        <option value="<%= guest.id %>"><%= guest.name %></option>
-      <% end %>
-    </select>
+
+    <%= select_tag(:guest_id, options_for_select(@guests)) %>
+
 
 
 

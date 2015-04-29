@@ -8,6 +8,7 @@ class AttendeesController < ApplicationController
 
   def new
     @attendee = Attendee.new
+    @event = Event.find(params[:event_id])
   end
 
   def create

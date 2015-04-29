@@ -4,5 +4,9 @@ duplicates allowed here
 <br><br>
 
 <% @attendees.each do |attendee| %>
+
   <li><%= User.find(attendee.user_id).name %></li>
+  <li>User ID: <%= attendee.user_id %> </li>
+  <li>Event ID: <%= attendee.event_id %> </li>
+
 <% end %>
