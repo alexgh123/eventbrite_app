@@ -14,17 +14,15 @@ new attendees right here!<br><br>
 
 
 
-    <%= f.hidden_field :event_id, :value => params[:event_id] %>
 
-
-
-
+    <%= f.hidden_field :event_id, :value => @event.id %>
 
 
 
 
 
     <!-- :value => params[:rfid] -->
+      <!-- f.button  :submit , name: "subaction",value: "update" -->
 
     <%= f.submit "Create my attendee"%>
 
