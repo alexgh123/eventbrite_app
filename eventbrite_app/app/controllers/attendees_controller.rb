@@ -7,8 +7,8 @@ class AttendeesController < ApplicationController
   end
 
   def new
-    @event = Event.find(params[:event_id])
     @attendee = Attendee.new
+    @event = Event.find(params[:event_id])
   end
 
   def create
@@ -21,6 +21,10 @@ class AttendeesController < ApplicationController
       flash[:failure] = "you are an idiot AND didn't create an attendee"
       redirect_to new_attendee_path
     end
+  end
+
+  def show
+    @attendee = Attendee.find(params[:id])
   end
 
 

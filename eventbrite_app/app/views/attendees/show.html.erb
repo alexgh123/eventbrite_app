@@ -1,0 +1,7 @@
+<li>Attendee event: <%= @attendee.event_id%></li>
+<li>Attendee user id: <%=@attendee.user_id%></li>
+
+
+<br>
+
+<%= link_to "Event details:", event_path(@attendee.event_id) %>
