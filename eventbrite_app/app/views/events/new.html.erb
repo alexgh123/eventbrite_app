@@ -11,6 +11,17 @@ Create a new event!
       <%= f.label :location %>
       <%= f.text_field :location %>
     </li>
+    <br>
+    People you can invite:
+
+    <!--   event id
+      guests -->
+    <select name= "user_id">
+      <%= @guests.each do |guest| %>
+        <option value="<%= guest.id %>"><%= guest.name %></option>
+      <% end %>
+    </select>
+
 
 
     <!-- why don't I have to submit the correct user data -->

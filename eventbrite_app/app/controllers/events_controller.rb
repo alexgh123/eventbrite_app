@@ -9,6 +9,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @attendee = Attendee.new
+    @guests = User.all
   end
 
   def show
