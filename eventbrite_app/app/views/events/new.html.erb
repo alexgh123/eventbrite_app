@@ -14,27 +14,13 @@ Create a new event!
     <br>
 
 
-     Attendees:<br><br>
-    <%= f.fields_for :attendees do |attendees_form| %>
-
-      <li>
-        <%= attendees_form.label :event_id %>
-        <%= attendees_form.text_field :event_id %>
-      </li>
-
-      <li>
-        <%= attendees_form.label :user_id %>
-        <%= attendees_form.text_field :user_id %>
-      </li>
-
-
-    <% end %>
 
 
 
 
 
-      <%= f.submit "Create my event(and attendees)"%>
+
+      <%= f.submit "Create my event"%>
   </ul>
 
 <% end %>
