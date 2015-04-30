@@ -7,9 +7,16 @@ class EventsController < ApplicationController
   end
 
   def new
-
     @event = Event.new
+    2.times { @event.attendees.build }
   end
+
+
+    # 3.times do
+    # question = @survey.questions.build
+    # 4.times { question.answers.build }
+  # end
+
 
   def show
     @event = Event.find(params[:id])
@@ -43,7 +50,7 @@ class EventsController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:name, :location)
+      params.require(:event).permit(:name, :location, attendee_attributes: [:user_id, :event_id])
     end
 
   # when i create an event, the current_user should provide the user_i
